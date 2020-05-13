@@ -8,8 +8,8 @@ csvWrg=open('Accepted.csv','w')
 csv_writer=csv.writer(csvAcc)
 csv_writer.writerow(['ProblemName','ProblemLink'])
 
-# username=input("What is your username:???")
-mainurl=f'https://codeforces.com/submissions/IamFailure'
+username=input("What is your username:???")
+mainurl=f'https://codeforces.com/submissions/{username}'
 url=requests.get(mainurl).text
 soup = BeautifulSoup(url,'lxml')
 pagelist=soup.find_all('span',class_='page-index')
